@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    background-color: black;
+}
+
+/*Landing-page*/
+.landing-page {
+    height: 100vh;
+    margin-bottom: 30vh;
+    scroll-snap-align: start;
+    background-image: linear-gradient(transparent, black), url(images/landingpage-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-landing-page {
+    display: flex;
+}
+
+/*Titre curseur animé*/
+.title {
+    font-size: 8em;
+    margin-left: 1em;
+    color: white;
+    top: 40vh;
+    font-family: 'Cormorant', monospace;
+    position: relative;
+    border-right: 2px solid transparent;
+    text-align: center;
+    white-space: nowrap;
+    max-height: 1em;
+    overflow: hidden;
+    animation: typewriter 4s steps(30) 1 normal both,
+        curseur 700ms steps(30) 11 normal;
+    animation-delay: 1.5s, 300ms;
+
+}
+
+.name {
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    margin-top: 55vh;
+    margin-left: 1em;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 6.4em;
+    }
+}
+
+@keyframes curseur {
+    from {
+        border-right-color: white
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/*Navigation page d'accueil*/
+nav {
+    padding: 2em;
+    background-color: white;
+    display: flex;
+    padding-left: 40em;
+    top: 0;
+}
+
+nav li {
+    display: inline;
+    font-size: 1rem;
+    font-family: "Montserrat";
+    color: #001235;
+    padding: 1.5em;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #577dc2;
+}
+
+
+/*Arrière-plan animé*/
+main {
+    background: linear-gradient(132deg, #090d0c, #244b6f, #89284b, #060065);
+    background-size: 800% 800%;
+    -webkit-animation: gradient 45s ease infinite;
+    -moz-animation: gradient 45s ease infinite;
+    animation: gradient 45s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 51% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 51% 0%
+    }
+}
+
+@-moz-keyframes gradient {
+    0% {
+        background-position: 51% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 51% 0%
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 51% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    100% {
+        background-position: 51% 0%
+    }
+}
+
+/*Style de chaque analogie*/
+main>div {
+    margin: 30vh 0 30vh 0;
+    scroll-snap-align: start;
+    color: white;
+}
+
+.paysage {
+    padding-top: 14vh;
+}
+
+.portrait {
+    padding-top: 6vh;
+}
+
+.sijetais {
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size: 1.5em;
+    margin: 2rem 0 2em 20vw;
+}
+
+.analogie {
+    font-weight: 900;
+}
+
+.valeur-ana {
+    font-family: 'Cormorant';
+    font-weight: 600;
+    font-size: 5.2em;
+    display: block;
+}
+
+.description {
+    font-family: 'Montserrat';
+    font-size: 0.83em;
+    text-align: justify;
+    margin-top: -1em;
+}
+
+#pluie .description,
+#saison .description {
+    margin-top: 1em;
+}
+
+#suggestion {
+    padding-bottom: 20vh;
+    margin-bottom: 0;
+}
+
+.image-valeur-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valeur-description {
+    margin-left: 1em;
+    max-width: 33em;
+}
+
+
+img {
+    max-height: 70vh;
+    max-width: 40vw;
+}
+
+/*Formulaire*/
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 1em 1.2em;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    width: 8em;
+    font-family: 'Montserrat';
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0.8em;
+    border: 0.2em solid #f1f1f1;
+    z-index: 9;
+    font-family: 'Montserrat';
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 1em;
+    background-color: white;
+    font-family: 'Montserrat';
+}
+
+.form-popup h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.3em;
+    font-family: 'Montserrat';
+}
+
+.form-container input {
+    width: 20em;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    font-family: 'Montserrat';
+}
+
+.form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container p {
+    font-size: 0.8em;
+}
+
+.form-container .btn {
+    background-color: rgb(0, 80, 104);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    font-family: 'Montserrat';
+}
+
+.accord {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 0.8em;
+    margin-bottom: 1.8em;
+}
+
+
+.form-container .cancel {
+    background-color: #555;
+}
+
+
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+#messageApresEnvoi {
+    font-size: 0.8em;
+    background-color: white;
+    color: black;
+    text-align: center;
+    display: block;
+    padding: 1em;
+    ;
+}
+
+
+/*FOOTER : volet visible/invisible*/
+footer {
+    text-align: center;
+    position: static;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+.mentions-legales {
+    color: white;
+    margin: 0;
+    padding: 1em 1em 1em 1em;
+    font-family: 'Montserrat';
+    font-size: 1.3em;
+}
+
+.sources,
+footer p,
+footer ul {
+    font-size: 0.8em;
+    color: white;
+    margin: 1em;
+    font-family: 'Montserrat';
+}
+
+footer a {
+    color: #98c1d9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    font-style: bold;
+}
+
+footer li {
+    list-style: none;
+}
+
+.volet {
+    overflow: hidden;
+    cursor: pointer;
+    background-color: black;
+}
+
+.volet-invisible {
+    height: 4em;
+    color: white;
+    margin: 0;
+}
+
+.volet-visible {
+    height: 35em;
+}

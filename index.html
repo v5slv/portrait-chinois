@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon portrait chinois</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;1,300&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+
+</head>
+
+<body>
+    <header class="landing-page">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#renard">Animal</a>
+                </li>
+                <li>
+                    <a href="#tableau">Tableau</a>
+                </li>
+                <li>
+                    <a href="#saison">Saison</a>
+                </li>
+                <li>
+                    <a href="#pierre">Pierre</a>
+                </li>
+                <li>
+                    <a href="#comete">Astre</a>
+                </li>
+                <li>
+                    <a href="#fee">Créature</a>
+                </li>
+                <li>
+                    <a href="#pluie">Son</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="text-landing-page">
+            <h1 class="title anim-curseur">Portrait chinois</h1>
+            <h2 class="name">Valérie Lapeyre</h2>
+        </div>
+    </header>
+
+    <main>
+    </main>
+
+    <a href="#suggestion"><button class="open-button" onclick="openForm()">Et toi ?</button></a>
+    <div class="form-popup" id="myForm">
+        <form action="/" method="post" class="form-container">
+            <h1>Et toi ?</h1>
+
+            <label for="analogie"><b>Si j'étais...</b></label>
+            <input type="text" id="analogie" placeholder="une forme" name="analogie" required>
+
+            <label for="valeurAnalogie"><b>...je serais...</b></label>
+            <input type="text" id="valeurAnalogie" placeholder="un coeur" name="valeurAnalogie" required>
+
+            <label for="descAnalogie"><b>...parce que...</b></label>
+            <input type="text" id="descAnalogie" placeholder="J'aime les coeurs !" name="descAnalogie" required>
+
+            <label for="courriel"><b>Ton adresse mail :</b></label>
+            <input type="email" id="courriel" placeholder="coucou@gmail.com" name="courriel">
+
+            <label class="accord">Tu es d'accord pour envoyer tes données personnelles (cf. Mentions légales)
+                <input type="checkbox" id="accord" name="accord" required>
+            </label>
+
+            <button id="envoi" type="submit" class="btn">Envoyer</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Fermer</button>
+        </form>
+        <div>
+            <p id="messageApresEnvoi"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="volet volet-invisible">
+            <h2 class="mentions-legales">Mentions légales</h2>
+            <p>Site réalisé par Valérie Lapeyre dans le cadre du BUT MMI à l'IUT de Champs-sur-Marne.
+                <br>Site hébergé par l'Université Gustave Eiffel - Adresse : 2 rue Albert Einstein, 77420
+                Champs-sur-Marne, France - Téléphone : +33 (0)1 60 95 75 00
+                - Adresse mail : webmaster@univ-eiffel.fr
+                <br> © 2022 Tous droits réservés par Valérie Lapeyre.
+                <br></p>
+            <h3 class="sources">Modalités de traitement des données à caractère personnel :</h3>
+            <p>Les données envoyées via le formulaire seront conservées sur des serveurs de l’université Gustave
+                Eiffel, en France, pendant un an au maximum. Elles seront supprimées durant l'été 2022. <br>
+                Responsable du traitement des données : Philippe Gambette (philippe.gambette@univ-eiffel.fr)</p>
+            <h3 class="sources">Outils et codes utilisés/modifiés :</h3>
+            <ul>
+                <li><a href="https://www.gradient-animator.com/">Générateur
+                        d'arrière-plan dégradé animé</a> par Ian Forrest</li>
+                <li><a href="https://www.geeksforgeeks.org/how-to-create-typewriter-animation-using-html-and-css/">Tutoriel
+                        d'animation de texte avec curseur</a> par <a
+                        href="https://auth.geeksforgeeks.org/user/tausifsiddiqui/articles">@tausifsiddiqui</a></li>
+                <li>Réalisation du code CSS du formulaire avec l'aide de Samuel Enriquez-Sarano</li>
+            </ul>
+
+            <h3 class="sources">Modalités de traitement des données à caractère personnel :</h3>
+            <p>Les données envoyées via le formulaire seront conservées sur des serveurs de l’université Gustave
+                Eiffel, en France, pendant un an au maximum. Elles seront supprimées durant l'été 2022. <br>
+                Responsable du traitement des données : Philippe Gambette (philippe.gambette@univ-eiffel.fr)</p>
+            </p>
+            <h3 class="sources"> Crédits images :</h3>
+            <ul>
+                <li>Renard : Licence CC0, <a
+                        href="https://www.publicdomainpictures.net/fr/view-image.php?image=223151&picture=renard-rouge">Public
+                        domain pictures</a></li>
+                <li>Reflected vista : <a href="https://www.erinhanson.com/portfolio/Reflected_Vista">© 2022 Erin Hanson
+                        - Red Rock Fine Art,
+                        Inc.</a></li>
+                <li>Saison : Licence CC0, <a
+                        href="https://www.pexels.com/photo/beautiful-bird-bloom-blooming-268496/">Pexels</a></li>
+                <li>Pierre : <a href="https://www.crystalclassics.co.uk/product/cc17469/">© 2022 Crystal Classics
+                        Ltd.</a></li>
+                <li>Comète : <a href="https://www.universetoday.com/106465/whoa-take-a-look-at-comet-ison-now/">© 2022
+                        Damian Peach</a></li>
+                <li>Fée : Licence CC0, <a href="https://www.flickr.com/photos/sofi01/14312433403/">Cicely Mary Baker</a>
+                </li>
+                <li>Pluie : Licence CC0, <a href="https://www.flickr.com/photos/sofi01/14312433403/">Pexels</a></li>
+                <li>Accueil : Licence CC0, <a href="https://www.pexels.com/photo/underwater-2170473/">Pexels</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+
+</html>
